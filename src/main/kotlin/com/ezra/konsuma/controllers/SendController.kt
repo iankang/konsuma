@@ -22,7 +22,7 @@ class SendController {
         @RequestParam("text")  text:String,
         @RequestParam("mclass")  mclass:String
     ):String{
-        logger.info("send","user: $user, pass: $password to: $to message: $text")
+        logger.info("user: $user, pass: $password to: $to message: $text")
         return "SMS sent"
     }
 }
