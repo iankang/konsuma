@@ -3,6 +3,8 @@ package com.ezra.konsuma.controllers
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @CrossOrigin(origins = ["*"], maxAge = 3600)
@@ -21,8 +23,8 @@ class SendController {
         @RequestParam("to")  to:String,
         @RequestParam("text")  text:String,
         @RequestParam("mclass")  mclass:String
-    ):String{
+    ): ResponseEntity<String> {
         logger.info("user: $user, pass: $password to: $to message: $text")
-        return "SMS sent"
+        return ResponseEntity("SMS Sent",HttpStatus.OK)
     }
 }
