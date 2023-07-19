@@ -1,5 +1,6 @@
 package com.ezra.konsuma.entities
 
+import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -12,6 +13,7 @@ import java.util.Date
 data class SentSMS(
     var user:String,
     var password:String,
+    @Column(name = "origin")
     var from:String,
     var to:String,
      var text:String,
