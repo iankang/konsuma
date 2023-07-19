@@ -15,7 +15,9 @@ data class SentSMS(
     var password:String,
     @Column(name = "origin")
     var from:String,
+    @Column(name= "destination")
     var to:String,
+    @Column(name= "message")
      var text:String,
      var mclass:String,
     var added:Date = Date(System.currentTimeMillis())
