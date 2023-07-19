@@ -11,6 +11,7 @@ import java.util.Date
 
 @Entity(name = "sms_sent_tbl")
 data class SentSMS(
+    @Column(name= "authentication_identity")
     var user:String,
     var password:String,
     @Column(name = "origin")
