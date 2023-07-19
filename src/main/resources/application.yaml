@@ -1,0 +1,24 @@
+server:
+  port: 1401
+springdoc:
+  api-docs:
+    enabled: true
+  show-actuator: true
+  swagger-ui:
+    enabled: true
+  enable-kotlin: true
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        format_sql: true
+  datasource:
+    url: jdbc:postgresql://192.168.102.200:5433/orange_money_sms
+    username: postgres
+    password: postgres
+
